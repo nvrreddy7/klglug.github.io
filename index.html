@@ -1,73 +1,77 @@
-<!DOCTYPE html>
 <html>
 <head>
-<title>KLUG</title>
-<style>
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover:not(.active) {
-    background-color:#A9A9A9;
-}
-
-.active {
-    background-color: 	#DB7093;
-}
-img {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
-}
-h1{
-  font-size:40pt;
-  }
-footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 0;
-  background-color: #333;
-  overflow: hidden;
-  text-align: center;
-}
-</style>
-
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<ul>
-  <li><a  href="about.html">About</a></li> 
-  <li><a href="index.html">Home</a></li>
-  <li><a href="contact.html">Contact</a></li>
-<li style="float:right"><a  href="login.html">Login</a></li>
-<li style="float:right"><a  href="Signup.html">Signup</a></li>
-  
-</ul>
-<img width=1450 height=600 src="index.jpeg"/>
+<div class="titlebar">
+<h1 text-align="left"><b><i>klu gnu linux users</i></b></h1>
+</div>
+<div1 class="lapimg">
+	
+	<script type="text/javascript"> 
+var i = 0; 
+var image = new Array();   
+// LIST OF IMAGES 
+image[0] = "logo.jpg"; 
+image[1] = "DSC_0004.JPG"; 
+image[2] = "DSC_0005.JPG";    
+image[3] = "DSC_0011.JPG";
+image[4] = "DSC_0532.JPG";
+image[5] = "DSC_0049.JPG";
+image[6] = "DSC_0131.JPG";
+image[7] = "DSC_0149.JPG";
+image[8] = "DSC_0160.JPG";
+image[9] = "DSC_0163.JPG";
+image[10] = "DSC_0363.JPG";
+image[11] = "DSC_0532.JPG";
+var k = image.length-1;    
 
-<center> <font color="#000000"> <h1>KLU GNU/Linux Users' Group</h1></font> </center>
+var caption = new Array(); 
+
+// LIST OF CAPTİONS  
+caption[0] = "klug logo"; 
+caption[1] = "klu linux users group"; 
+caption[2] = "klu linux users group";   
+caption[3] = "our team";
+caption[4] ="our sessions";
+caption[5] ="our activites";
+function swapImage(){ 
+var el = document.getElementById("mydiv"); 
+el.innerHTML=caption[i]; 
+var img= document.getElementById("slide"); 
+img.src= image[i];  
+if(i < k ) { i++;}  
+else  { i = 0; } 
+setTimeout("swapImage()",5000);  
+} 
+
+function addLoadEvent(func) { 
+var oldonload = window.onload; 
+if (typeof window.onload != 'function') { 
+window.onload = func; 
+} 
+else { 
+window.onload = function() { 
+if (oldonload) { 
+oldonload(); 
+} 
+func();}}}  
+addLoadEvent(function() { 
+swapImage(); });  
+</script> 
+
+<table class="logo" style="border:3px solid #00aaff;background-color:#00aaaa;"> 
+<tr> 
+<td> 
+<img name="slide" id="slide" alt ="my images" height="400px" width="820px" src="image_1.gif"/> 
+</td> 
+</tr> 
+<tr> 
+<td align="center"style="font:small-caps bold 15px georgia; color:blue;"> 
+<div id ="mydiv"></div> 
+</tr> 
+</td> 
+</table> 
+</div1>
 </body>
-<footer>
-<ul>
-<center> <font color="#ffffff"><p>Copyleft 2016 kluglug.in</p></font></center>
-</footer>
 </html>
-
